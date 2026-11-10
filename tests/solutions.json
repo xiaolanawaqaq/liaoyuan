@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "coordinates": "zero-based c=column, r=row; each turns entry is followed by exactly one end_turn",
+  "levels": [
+    {
+      "index": 0,
+      "seed": 103,
+      "strategy": "Dig the three-cell grass neck from water to water; leave the forest intact.",
+      "expected": {"status": "won", "turns": 6, "stars": 3, "actions": 3, "init_value": 132, "burnt_value": 16, "cleared_value": 3, "saved_value": 113, "passive_loss_turn": 10},
+      "turns": [
+        [{"tool": "shovel", "c": 5, "r": 3}, {"tool": "shovel", "c": 5, "r": 4}, {"tool": "shovel", "c": 5, "r": 5}],
+        [], [], [], [], []
+      ]
+    },
+    {
+      "index": 1,
+      "seed": 211,
+      "strategy": "Axe then shovel each tree bridge. Start the second tree on turn one and finish it on turn two.",
+      "expected": {"status": "won", "turns": 8, "stars": 3, "actions": 4, "init_value": 124, "burnt_value": 28, "cleared_value": 6, "saved_value": 90, "passive_loss_turn": 11},
+      "turns": [
+        [{"tool": "axe", "c": 6, "r": 3}, {"tool": "shovel", "c": 6, "r": 3}, {"tool": "axe", "c": 6, "r": 4}],
+        [{"tool": "shovel", "c": 6, "r": 4}],
+        [], [], [], [], [], []
+      ]
+    },
+    {
+      "index": 2,
+      "seed": 307,
+      "strategy": "Close the east exit first, then the three-cell south exit before the wind turns. Do not leave diagonal corners open.",
+      "expected": {"status": "won", "turns": 8, "stars": 3, "actions": 6, "init_value": 144, "burnt_value": 16, "cleared_value": 6, "saved_value": 122, "passive_loss_turn": 7},
+      "turns": [
+        [{"tool": "shovel", "c": 6, "r": 1}, {"tool": "shovel", "c": 6, "r": 2}],
+        [{"tool": "shovel", "c": 6, "r": 3}, {"tool": "shovel", "c": 4, "r": 4}],
+        [{"tool": "shovel", "c": 2, "r": 4}, {"tool": "shovel", "c": 3, "r": 4}],
+        [], [], [], [], []
+      ]
+    },
+    {
+      "index": 3,
+      "seed": 409,
+      "strategy": "Remove one west tree bridge, wet the other, dig all three east bridge cells, then return to axe and shovel the protected tree.",
+      "expected": {"status": "won", "turns": 8, "stars": 3, "actions": 8, "init_value": 141, "burnt_value": 26, "cleared_value": 9, "saved_value": 106, "passive_loss_turn": 5},
+      "turns": [
+        [{"tool": "axe", "c": 4, "r": 2}, {"tool": "shovel", "c": 4, "r": 2}],
+        [{"tool": "water", "c": 4, "r": 3}, {"tool": "shovel", "c": 9, "r": 6}],
+        [{"tool": "shovel", "c": 9, "r": 7}, {"tool": "shovel", "c": 9, "r": 8}],
+        [{"tool": "axe", "c": 4, "r": 3}, {"tool": "shovel", "c": 4, "r": 3}],
+        [], [], [], []
+      ]
+    },
+    {
+      "index": 4,
+      "seed": 503,
+      "strategy": "Wet the two west tree bridges on staggered turns and remove their grass bypasses. Use axe and shovel to close the east bridge, then renew west protection at wet=0.",
+      "expected": {"status": "won", "turns": 8, "stars": 3, "actions": 10, "init_value": 175, "burnt_value": 42, "cleared_value": 8, "saved_value": 125, "passive_loss_turn": 7},
+      "turns": [
+        [{"tool": "water", "c": 4, "r": 2}, {"tool": "shovel", "c": 4, "r": 3}, {"tool": "shovel", "c": 4, "r": 7}],
+        [{"tool": "water", "c": 4, "r": 6}, {"tool": "axe", "c": 11, "r": 3}, {"tool": "shovel", "c": 11, "r": 3}],
+        [{"tool": "shovel", "c": 11, "r": 4}, {"tool": "shovel", "c": 11, "r": 5}],
+        [{"tool": "water", "c": 4, "r": 2}],
+        [{"tool": "water", "c": 4, "r": 6}],
+        [], [], []
+      ]
+    }
+  ]
+}

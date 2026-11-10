@@ -1,0 +1,49 @@
+# Godot caches; adjacent *.import settings and *.uid files remain versioned.
+.godot/
+.import/
+
+# Binary images excluded from the source repository (project icon icon.svg stays).
+*.png
+*.png.import
+
+# Local exports and build outputs.
+/build/
+/dist/
+/release/
+/exports/
+*.apk
+*.aab
+*.exe
+*.x86_64
+*.pck
+*.dmg
+*.app/
+*.zip
+*.7z
+*.tar
+*.tar.gz
+
+# Signing material and local credentials.
+.env
+.env.*
+!.env.example
+export_credentials.cfg
+credentials.json
+*.keystore
+*.jks
+*.pem
+*.key
+*.p12
+*.pfx
+*credentials*.json
+*secrets*.json
+
+# Tool and editor state.
+.gradle/
+__pycache__/
+*.py[cod]
+*.log
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
